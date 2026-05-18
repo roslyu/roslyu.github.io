@@ -34,6 +34,58 @@
     a { color: #2c5e2a; text-decoration: none; border-bottom: 1px solid #cbdbb8; }
     a:hover { border-bottom-color: #2c5e2a; }
     .back { display: inline-block; margin-top: 2rem; color: #8a9a7a; }
+
+    /* NEW: Drop-down styles with dates on the right */
+    details {
+      margin-bottom: 1.2rem;
+    }
+    
+    summary {
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 0.5rem;
+      list-style: none;
+      padding: 0.5rem 0;
+      font-weight: 600;
+      color: #2c5e2a;
+    }
+    
+    /* Remove default triangle */
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    
+    /* Custom arrow */
+    summary::before {
+      content: "▶";
+      font-size: 0.7rem;
+      color: #8a9a7a;
+      transition: transform 0.2s ease;
+    }
+    
+    details[open] summary::before {
+      content: "▼";
+    }
+    
+    .job-title {
+      font-weight: 600;
+      color: #2c5e2a;
+    }
+    
+    .job-dates {
+      color: #8a9a7a;
+      font-size: 0.85rem;
+      font-weight: normal;
+      white-space: nowrap;
+    }
+    
+    details ul {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      margin-left: 1.8rem;
+    }
   </style>
 </head>
 <body>
@@ -43,36 +95,56 @@
 
   <h2>Experience</h2>
   
+  <!-- UPDATED: PwC with drop-down and date on right -->
   <details>
-  <summary><strong>Tax Associate · PwC</strong> (Oct 2023 – Apr 2025)</summary>
-  <ul style="margin-top: 0.75rem; margin-left: 1.2rem;">
-  <li>Delivered tax compliance, provision (ASC 740), and consulting to 20+ private clients.</li>
-  <li>Prepared corporate (1120, 1120‑S) and partnership (1065) returns.</li>
-  <li>Created annual budgets and flexible forecasts, analyzing variances for client engagements.</li>
-  <li>Assisted with quarterly and annual tax provision calculations, including deferred tax analysis and rate reconciliation.</li>
-  <li>Researched complex federal and state tax issues related to international filing, R&D credits, NOL carryforwards, delivering memos that informed client tax positions.</li>
-  <li>Trained 7 associates/interns on tax software and processes during busy season.</li>
-  <li>CPA license obtained while at PwC (exams completed during Master of Accounting).</li>
-  </ul>
-</details>
-    
-  <p><strong>Tax Intern · STANCIL CPAs - Advisors</strong> (May 2022 – Aug 2022)<br>
-  · Assisted in tax fraud investigation of a local business's employee withholding tax noncompliance, analyzing payroll data for state reporting.<br>
-  · Prepared tax returns, financial analyses, engagement binders, and work papers for individuals and small businesses.</p>
+    <summary>
+      <span class="job-title">Tax Associate · PwC</span>
+      <span class="job-dates">Oct 2023 – Apr 2025</span>
+    </summary>
+    <ul>
+      <li>Delivered tax compliance, provision (ASC 740), and consulting to 20+ private clients.</li>
+      <li>Prepared corporate (1120, 1120‑S) and partnership (1065) returns.</li>
+      <li>Created annual budgets and flexible forecasts, analyzing variances for client engagements.</li>
+      <li>Assisted with quarterly and annual tax provision calculations, including deferred tax analysis and rate reconciliation.</li>
+      <li>Researched complex federal and state tax issues related to international filing, R&D credits, NOL carryforwards, delivering memos that informed client tax positions.</li>
+      <li>Trained 7 associates/interns on tax software and processes during busy season.</li>
+      <li>CPA license obtained while at PwC (exams completed during Master of Accounting).</li>
+    </ul>
+  </details>
+  
+  <!-- UPDATED: STANCIL Tax Intern with drop-down and date on right -->
+  <details>
+    <summary>
+      <span class="job-title">Tax Intern · STANCIL CPAs - Advisors</span>
+      <span class="job-dates">May 2022 – Aug 2022</span>
+    </summary>
+    <ul>
+      <li>Assisted in tax fraud investigation of a local business's employee withholding tax noncompliance, analyzing payroll data for state reporting.</li>
+      <li>Prepared tax returns, financial analyses, engagement binders, and work papers for individuals and small businesses.</li>
+    </ul>
+  </details>
 
-  <p><strong>Graduate Research Assistant · NC State</strong> (Aug 2022 – May 2023)<br>
-  · Researched state accountancy board laws regarding LGBTQ+ inclusion in public accommodations language.<br>
-  · Supported AICPA ethics research and AACSB assessment.</p>
+  <!-- UPDATED: Graduate Research Assistant with drop-down and date on right -->
+  <details>
+    <summary>
+      <span class="job-title">Graduate Research Assistant · NC State</span>
+      <span class="job-dates">Aug 2022 – May 2023</span>
+    </summary>
+    <ul>
+      <li>Researched state accountancy board laws regarding LGBTQ+ inclusion in public accommodations language.</li>
+      <li>Supported AICPA ethics research and AACSB assessment.</li>
+    </ul>
+  </details>
 
   <h2>Licenses & Certifications</h2>
   <p>✔ Certified Public Accountant (CPA)<br>
     North Carolina State Board of Certified Public Accountant (CPA) Examiners<br>
-    Credential ID 47637<br>
+    Credential ID 47637</p>
 
   <h2>Education</h2>
-  ✔ Master of Accounting — Tax Strategy focus<br>
+  <p>✔ Master of Accounting — Tax Strategy focus<br>
     North Carolina State University<br>
-  ✔ Bachelor of Science in Accounting — Data Analytics focus<br>
+    ✔ Bachelor of Science in Accounting — Data Analytics focus<br>
     North Carolina State University</p>
 
   <h2>Research & Interests</h2>
