@@ -35,7 +35,7 @@
     a:hover { border-bottom-color: #2c5e2a; }
     .back { display: inline-block; margin-top: 2rem; color: #8a9a7a; }
 
-    /* NEW: Drop-down styles with dates on the right */
+    /* Drop-down styles with dates on the right */
     details {
       margin-bottom: 1.2rem;
     }
@@ -69,12 +69,12 @@
       content: "▼";
     }
     
-    .job-title {
+    .item-title {
       font-weight: 600;
       color: #2c5e2a;
     }
     
-    .job-dates {
+    .item-date {
       color: #8a9a7a;
       font-size: 0.85rem;
       font-weight: normal;
@@ -82,6 +82,13 @@
     }
     
     details ul {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      margin-left: 1.8rem;
+    }
+    
+    /* For simple text content inside drop-downs */
+    details p {
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
       margin-left: 1.8rem;
@@ -95,11 +102,11 @@
 
   <h2>Experience</h2>
   
-  <!-- UPDATED: PwC with drop-down and date on right -->
+  <!-- PwC -->
   <details>
     <summary>
-      <span class="job-title">Tax Associate · PwC</span>
-      <span class="job-dates">Oct 2023 – Apr 2025</span>
+      <span class="item-title">Tax Associate · PwC</span>
+      <span class="item-date">Oct 2023 – Apr 2025</span>
     </summary>
     <ul>
       <li>Delivered tax compliance, provision (ASC 740), and consulting to 20+ private clients.</li>
@@ -112,11 +119,11 @@
     </ul>
   </details>
   
-  <!-- UPDATED: STANCIL Tax Intern with drop-down and date on right -->
+  <!-- STANCIL Tax Intern -->
   <details>
     <summary>
-      <span class="job-title">Tax Intern · STANCIL CPAs - Advisors</span>
-      <span class="job-dates">May 2022 – Aug 2022</span>
+      <span class="item-title">Tax Intern · STANCIL CPAs - Advisors</span>
+      <span class="item-date">May 2022 – Aug 2022</span>
     </summary>
     <ul>
       <li>Assisted in tax fraud investigation of a local business's employee withholding tax noncompliance, analyzing payroll data for state reporting.</li>
@@ -124,11 +131,11 @@
     </ul>
   </details>
 
-  <!-- UPDATED: Graduate Research Assistant with drop-down and date on right -->
+  <!-- Graduate Research Assistant -->
   <details>
     <summary>
-      <span class="job-title">Graduate Research Assistant · NC State</span>
-      <span class="job-dates">Aug 2022 – May 2023</span>
+      <span class="item-title">Graduate Research Assistant · NC State</span>
+      <span class="item-date">Aug 2022 – May 2023</span>
     </summary>
     <ul>
       <li>Researched state accountancy board laws regarding LGBTQ+ inclusion in public accommodations language.</li>
@@ -137,18 +144,61 @@
   </details>
 
   <h2>Licenses & Certifications</h2>
-  <p>✔ Certified Public Accountant (CPA)<br>
-    North Carolina State Board of Certified Public Accountant (CPA) Examiners<br>
-    Credential ID 47637</p>
+  
+  <!-- CPA License -->
+  <details>
+    <summary>
+      <span class="item-title">Certified Public Accountant (CPA)</span>
+      <span class="item-date">Issued Nov 18, 2024</span>
+    </summary>
+    <ul>
+      <li>North Carolina State Board of Certified Public Accountant (CPA) Examiners</li>
+      <li>Credential ID 47637</li>
+      <li>Active and in good standing</li>
+    </ul>
+  </details>
 
   <h2>Education</h2>
-  <p>✔ Master of Accounting — Tax Strategy focus<br>
-    North Carolina State University<br>
-    ✔ Bachelor of Science in Accounting — Data Analytics focus<br>
-    North Carolina State University</p>
+  
+  <!-- Master's Degree -->
+  <details>
+    <summary>
+      <span class="item-title">Master of Accounting — Tax Strategy focus</span>
+      <span class="item-date">Aug 2022 – May 2023</span>
+    </summary>
+    <ul>
+      <li>North Carolina State University</li>
+      <li>SAP University Alliances program participant</li>
+      <li>Graduate Research Assistant</li>
+    </ul>
+  </details>
+
+  <!-- Bachelor's Degree -->
+  <details>
+    <summary>
+      <span class="item-title">Bachelor of Science in Accounting — Data Analytics focus</span>
+      <span class="item-date">Aug 2018 – May 2022</span>
+    </summary>
+    <ul>
+      <li>North Carolina State University</li>
+      <li>Summa Cum Laude (if applicable — add or remove)</li>
+    </ul>
+  </details>
 
   <h2>Research & Interests</h2>
-  <p>Tax compliance · ASC 740 · state board policy analysis · DEI in professional licensing</p>
+  
+  <details>
+    <summary>
+      <span class="item-title">Research & Professional Interests</span>
+      <span class="item-date"></span>
+    </summary>
+    <ul>
+      <li>Tax compliance</li>
+      <li>ASC 740 (Income Tax Accounting)</li>
+      <li>State board policy analysis</li>
+      <li>DEI in professional licensing</li>
+    </ul>
+  </details>
 
   <a href="index.html" class="back">← back to front door</a>
 </div>
