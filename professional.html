@@ -35,21 +35,16 @@
     a:hover { border-bottom-color: #2c5e2a; }
     .back { display: inline-block; margin-top: 2rem; color: #8a9a7a; }
 
-    /* Drop-down styles with dates on the right */
+    /* Drop-down styles with cleaner job/employer separation */
     details {
       margin-bottom: 1.2rem;
     }
     
     summary {
       cursor: pointer;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 0.5rem;
+      display: block;
       list-style: none;
       padding: 0.5rem 0;
-      font-weight: 600;
-      color: #2c5e2a;
     }
     
     /* Remove default triangle */
@@ -57,28 +52,46 @@
       display: none;
     }
     
-    /* Custom arrow */
+    /* Custom arrow - positioned to the left of job title */
     summary::before {
       content: "▶";
       font-size: 0.7rem;
       color: #8a9a7a;
       transition: transform 0.2s ease;
+      display: inline-block;
+      margin-right: 0.5rem;
     }
     
     details[open] summary::before {
       content: "▼";
     }
     
+    /* Job title / Degree / Credential line */
     .item-title {
       font-weight: 600;
       color: #2c5e2a;
+      font-size: 1rem;
+      display: inline;
     }
     
+    /* Date on the same line as title, pushed right */
     .item-date {
       color: #8a9a7a;
       font-size: 0.85rem;
       font-weight: normal;
       white-space: nowrap;
+      float: right;
+    }
+    
+    /* Employer / University / Board line - separated, indented, slightly smaller */
+    .item-subtitle {
+      color: #6b7c5e;
+      font-size: 0.85rem;
+      font-weight: normal;
+      margin-top: 0.15rem;
+      margin-bottom: 0.25rem;
+      margin-left: 1.3rem;
+      display: block;
     }
     
     details ul {
@@ -105,8 +118,10 @@
   <!-- PwC -->
   <details>
     <summary>
-      <span class="item-title">Tax Associate · PwC</span>
+      <span class="item-title">Tax Associate</span>
       <span class="item-date">Oct 2023 – Apr 2025</span>
+      <br>
+      <span class="item-subtitle">PwC LLP</span>
     </summary>
     <ul>
       <li>Delivered tax compliance, provision (ASC 740), and consulting to 20+ private clients.</li>
@@ -122,8 +137,10 @@
   <!-- STANCIL Tax Intern -->
   <details>
     <summary>
-      <span class="item-title">Tax Intern · STANCIL CPAs - Advisors</span>
+      <span class="item-title">Tax Intern</span>
       <span class="item-date">May 2022 – Aug 2022</span>
+      <br>
+      <span class="item-subtitle">STANCIL CPAs - Advisors</span>
     </summary>
     <ul>
       <li>Assisted in tax fraud investigation of a local business's employee withholding tax noncompliance, analyzing payroll data for state reporting.</li>
@@ -131,11 +148,27 @@
     </ul>
   </details>
 
+  <!-- Teaching Assistant -->
+  <details>
+    <summary>
+      <span class="item-title">Graduate Teaching Assistant</span>
+      <span class="item-date">Jan 2023 – May 2023</span>
+      <br>
+      <span class="item-subtitle">North Carolina State University</span>
+    </summary>
+    <ul>
+      <li>Graded student assignments for undergraduate Accounting classes.</li>
+      <li>Proctored undergraduate Accounting exams in person.</li>
+    </ul>
+  </details>
+
   <!-- Graduate Research Assistant -->
   <details>
     <summary>
-      <span class="item-title">Graduate Research Assistant · NC State</span>
-      <span class="item-date">Aug 2022 – May 2023</span>
+      <span class="item-title">Graduate Research Assistant</span>
+      <span class="item-date">Aug 2022 – Dec 2022</span>
+      <br>
+      <span class="item-subtitle">North Carolina State University</span>
     </summary>
     <ul>
       <li>Researched state accountancy board laws regarding LGBTQ+ inclusion in public accommodations language.</li>
@@ -150,9 +183,10 @@
     <summary>
       <span class="item-title">Certified Public Accountant (CPA)</span>
       <span class="item-date">Issued Nov 18, 2024</span>
+      <br>
+      <span class="item-subtitle">North Carolina State Board of Certified Public Accountant (CPA) Examiners</span>
     </summary>
     <ul>
-      <li>North Carolina State Board of Certified Public Accountant (CPA) Examiners</li>
       <li>Credential ID 47637</li>
       <li>Active and in good standing</li>
     </ul>
@@ -165,9 +199,10 @@
     <summary>
       <span class="item-title">Master of Accounting — Tax Strategy focus</span>
       <span class="item-date">Aug 2022 – May 2023</span>
+      <br>
+      <span class="item-subtitle">North Carolina State University</span>
     </summary>
     <ul>
-      <li>North Carolina State University</li>
       <li>SAP University Alliances program participant</li>
       <li>Graduate Research Assistant</li>
     </ul>
@@ -178,10 +213,11 @@
     <summary>
       <span class="item-title">Bachelor of Science in Accounting — Data Analytics focus</span>
       <span class="item-date">Aug 2018 – May 2022</span>
+      <br>
+      <span class="item-subtitle">North Carolina State University</span>
     </summary>
     <ul>
-      <li>North Carolina State University</li>
-      <li>Summa Cum Laude (if applicable — add or remove)</li>
+      <li>Cum Laude</li>
     </ul>
   </details>
 
