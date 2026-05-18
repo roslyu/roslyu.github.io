@@ -35,7 +35,7 @@
     a:hover { border-bottom-color: #2c5e2a; }
     .back { display: inline-block; margin-top: 2rem; color: #8a9a7a; }
 
-    /* Drop-down styles with cleaner job/employer separation */
+    /* Drop-down styles */
     details {
       margin-bottom: 1.2rem;
     }
@@ -47,12 +47,10 @@
       padding: 0.5rem 0;
     }
     
-    /* Remove default triangle */
     summary::-webkit-details-marker {
       display: none;
     }
     
-    /* Custom arrow - positioned to the left of job title */
     summary::before {
       content: "▶";
       font-size: 0.7rem;
@@ -66,7 +64,6 @@
       content: "▼";
     }
     
-    /* Job title / Degree / Credential line */
     .item-title {
       font-weight: 600;
       color: #2c5e2a;
@@ -74,7 +71,6 @@
       display: inline;
     }
     
-    /* Date on the same line as title, pushed right */
     .item-date {
       color: #8a9a7a;
       font-size: 0.85rem;
@@ -83,7 +79,6 @@
       float: right;
     }
     
-    /* Employer / University / Board line - separated, indented, slightly smaller */
     .item-subtitle {
       color: #6b7c5e;
       font-size: 0.85rem;
@@ -99,13 +94,6 @@
       margin-bottom: 0.5rem;
       margin-left: 1.8rem;
     }
-    
-    /* For simple text content inside drop-downs */
-    details p {
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-      margin-left: 1.8rem;
-    }
   </style>
 </head>
 <body>
@@ -115,165 +103,216 @@
 
   <h2>Experience</h2>
   
-<!-- PwC with nested drop-downs -->
-<details>
-  <summary>
-    <span class="item-title">Tax Associate</span>
-    <span class="item-date">Oct 2023 – Apr 2025</span>
-    <br>
-    <span class="item-subtitle">PwC LLP</span>
-  </summary>
-  
-  <!-- External Client Work (nested drop-down with sub-categories) -->
-  <details style="margin-left: 1rem; margin-top: 0.75rem;">
-    <summary style="font-weight: 500; color: #3a5e3a;">🏢 External Client Work</summary>
+  <!-- PwC with nested drop-downs -->
+  <details>
+    <summary>
+      <span class="item-title">Tax Associate</span>
+      <span class="item-date">Oct 2023 – Apr 2025</span>
+      <br>
+      <span class="item-subtitle">PwC LLP</span>
+    </summary>
     
-    <!-- Tax Returns & Compliance -->
+    <!-- External Client Work -->
+    <details style="margin-left: 1rem; margin-top: 0.75rem;">
+      <summary style="font-weight: 500; color: #3a5e3a;">🏢 External Client Work</summary>
+      
+      <!-- Tax Returns & Compliance -->
+      <details style="margin-left: 1rem; margin-top: 0.5rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">📄 Tax Returns & Compliance</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Prepared and reviewed corporate (1120, 1120‑S) and partnership (1065) tax returns.</li>
+          <li>Delivered tax compliance, provision (ASC 740), and consulting to 20+ private clients.</li>
+          <li>Assisted with quarterly and annual tax provision calculations, including deferred tax analysis and rate reconciliation.</li>
+        </ul>
+      </details>
+      
+      <!-- Fixed Assets & Depreciation -->
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">🏗️ Fixed Assets & Depreciation</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Analyzed and prepared/reviewed fixed asset calculations, determining asset classification and applicable depreciation schedules.</li>
+          <li>Researched fixed asset laws including Sec 179, MACRS (Section 168), state vs. federal vs. international depreciation, capitalization thresholds, and 1231 asset classification.</li>
+          <li>Determined treatment of gains vs. losses, intangible vs. tangible assets, and location-based state law applicability.</li>
+          <li>Calculated useful life and current asset value; created depreciation schedules in Excel workpapers.</li>
+        </ul>
+      </details>
+      
+      <!-- International Tax & Currency -->
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">🌍 International Tax & Currency</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Researched and calculated international tax credits for clients with cross-border activity.</li>
+          <li>Used Orbitax (OneSource) foreign currency translation tool to convert foreign currency amounts (e.g., total revenue/loss) to USD at year-end exchange rates.</li>
+        </ul>
+      </details>
+      
+      <!-- Complex Tax Issues & Credits -->
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">🏛️ Complex Tax Issues & Credits</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Tracked tax treatment of complex items across multiple states, including Sec 163(j), state taxes paid, R&D credits, international taxes paid, and nonresident withholding.</li>
+          <li>Prepared separate workpapers for state apportionment and state modification calculations.</li>
+        </ul>
+      </details>
+      
+      <!-- Quarterly Estimates & Vouchers -->
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">📅 Quarterly Estimates & Vouchers</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Calculated quarterly estimated tax payments for clients after requesting and reviewing end-of-quarter trial balances or forecasted trial balances.</li>
+          <li>Prepared voucher packages for clients, including instructions for online or mail payment options.</li>
+        </ul>
+      </details>
+      
+      <!-- Partnership Structures & Flow-Through -->
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">🔗 Partnership Structures & Flow-Through</summary>
+        
+        <details style="margin-left: 1rem; margin-top: 0.25rem;">
+          <summary style="font-weight: 500; color: #7a9a6e;">🏛️ Entity Structures & DREs</summary>
+          <ul style="margin-left: 1.5rem;">
+            <li>Researched and organized partnership structures, including DREs (Disregarded Entities) and complex flow-through tax laws.</li>
+            <li>Analyzed how state-level treatment of DREs impacts apportionment and filing requirements.</li>
+          </ul>
+        </details>
+        
+        <details style="margin-left: 1rem; margin-top: 0.25rem;">
+          <summary style="font-weight: 500; color: #7a9a6e;">📊 Partner Basis, Allocations & K-1/K-3</summary>
+          <ul style="margin-left: 1.5rem;">
+            <li>Prepared partner packages and partner basis calculations for partnership clients.</li>
+            <li>Calculated and prepared Schedule K-1s for partners, including allocations of income, deductions, credits, and distributions.</li>
+            <li>Prepared Schedule K-3s for partners with international activity, reporting foreign tax credits, foreign source income, and other cross-border items.</li>
+            <li>Worked through Sec 704(b) book-tax differences and capital account maintenance.</li>
+          </ul>
+        </details>
+        
+        <details style="margin-left: 1rem; margin-top: 0.25rem;">
+          <summary style="font-weight: 500; color: #7a9a6e;">💼 Client Examples (Anonymized)</summary>
+          <ul style="margin-left: 1.5rem;">
+            <li><strong>Real estate partnership (15+ partners):</strong> Handled basis schedules, allocations of rental income/losses, and K-1 preparation for tax year 2024.</li>
+            <li><strong>Professional services LLP:</strong> Researched guaranteed payment treatment and prepared K-3s for foreign partners with cross-border activity.</li>
+            <li><strong>Investment partnership:</strong> Worked through Sec 704(b) allocations of capital gains and prepared K-1s with complex footnote disclosures.</li>
+          </ul>
+        </details>
+      </details>
+      
+      <!-- Tax Research & Technical Guidance -->
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">🔍 Tax Research & Technical Guidance</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Researched complex federal and state tax issues related to international filing, R&D credits, NOL carryforwards, delivering memos that informed client tax positions.</li>
+          <li>Contacted IRS and state revenue agencies to resolve client tax issues and provide advisory guidance on next steps.</li>
+        </ul>
+      </details>
+      
+      <!-- Client Deliverables & Portal Setup -->
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">📦 Client Deliverables & Portal Setup</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Delivered return packages and workpapers to clients — including setting up external accounts for clients in our tax workpaper database so they could securely access deliverables directly instead of via email.</li>
+          <li>Managed secure delivery protocols (password-protected locked versions + unlocked versions) when email was necessary.</li>
+        </ul>
+      </details>
+      
+      <!-- Financial Forecasts & Client Advisory -->
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">📈 Financial Forecasts & Client Advisory</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Prepared financial forecasts for clients, analyzing variances to guide decision-making.</li>
+        </ul>
+      </details>
+    </details>
+    
+    <!-- Internal Team & Operations -->
     <details style="margin-left: 1rem; margin-top: 0.5rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">📄 Tax Returns & Compliance</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Prepared and reviewed corporate (1120, 1120‑S) and partnership (1065) tax returns.</li>
-        <li>Delivered tax compliance, provision (ASC 740), and consulting to 20+ private clients.</li>
-        <li>Assisted with quarterly and annual tax provision calculations, including deferred tax analysis and rate reconciliation.</li>
-      </ul>
+      <summary style="font-weight: 500; color: #3a5e3a;">🔧 Internal Team & Operations</summary>
+      
+      <details style="margin-left: 1rem; margin-top: 0.5rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">🌍 Cross-functional coordination</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Managed workflows with offshore Acceleration Center teams (India, international), delegating binder/file prep before EOD and reviewing completed work each morning — enabling 24-hour productivity cycles.</li>
+        </ul>
+      </details>
+      
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">📞 Specialty tax consulting</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Collaborated with internal specialty teams (International Tax, SALT, R&D Credits, Section 163(j), Partner Basis) to secure technical calculations.</li>
+          <li>Coordinated separate engagement contracts and built flex forecasts to budget their hours against deadlines.</li>
+        </ul>
+      </details>
+      
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">📋 Audit team support</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Prepared and reviewed tax provision calculations for private audit clients, following strict audit documentation guidelines before returning workpapers to audit teams.</li>
+        </ul>
+      </details>
+      
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">📎 E-filing & troubleshooting</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Managed federal and state e-filing for client returns, resolved e-file errors by reviewing XML files, and prepared paper filings for states with system issues — all after securing client and partner signatures.</li>
+        </ul>
+      </details>
+      
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">🌐 International compliance</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Prepared FBAR filings for clients with foreign accounts, ensuring compliance with Treasury reporting requirements.</li>
+        </ul>
+      </details>
+      
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">👥 Team training</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Trained 7 associates/interns on tax software and processes during busy season.</li>
+        </ul>
+      </details>
+      
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">📊 Internal budgeting</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Created annual budgets and flexible forecasts for internal team engagements, tracking actuals vs. plan to optimize resource allocation.</li>
+        </ul>
+      </details>
+      
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">📅 Weekly team meeting lead (rotating)</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Hosted weekly Monday morning team meetings on a rotating schedule with associates and senior associates.</li>
+          <li>Updated team slideshow (intro, upcoming events/reminders, team calendar with OOO tracking).</li>
+          <li>Pre-reviewed slides with a partner before each meeting.</li>
+          <li>Reminded team to update client summary spreadsheets, flex forecasts, and calendar availability for the next 2-3 weeks.</li>
+        </ul>
+      </details>
+      
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">⏰ Workflow & deadline management</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Maintained a client summary spreadsheet with pivot table grouping active clients by upcoming deadlines (e.g., 3/15 filings).</li>
+          <li>Led meeting walkthroughs where each assigned staff provided status updates, identified blockers, and flagged completion.</li>
+          <li>Once completed and filed, clients were removed from active pivot view.</li>
+        </ul>
+      </details>
+      
+      <details style="margin-left: 1rem; margin-top: 0.25rem;">
+        <summary style="font-weight: 500; color: #5e7a4b;">⚖️ Capacity planning & resource allocation</summary>
+        <ul style="margin-left: 1.5rem;">
+          <li>Used flex forecasts to track budgeted hours for senior associates, associates, interns, and fellows across client engagements.</li>
+          <li>Reviewed each person's client hours and total workload during meetings, enabling managers to identify availability, shift priorities, and balance team capacity.</li>
+        </ul>
+      </details>
     </details>
     
-    <!-- Tax Research & Technical Guidance -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">🔍 Tax Research & Technical Guidance</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Researched complex federal and state tax issues related to international filing, R&D credits, NOL carryforwards, delivering memos that informed client tax positions.</li>
-        <li>Contacted IRS and state revenue agencies to resolve client tax issues and provide advisory guidance on next steps.</li>
-      </ul>
-    </details>
-    
-    <!-- Client Deliverables & Portal Setup -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">📦 Client Deliverables & Portal Setup</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Delivered return packages and workpapers to clients — including setting up external accounts for clients in our tax workpaper database so they could securely access deliverables directly instead of via email.</li>
-        <li>Managed secure delivery protocols (password-protected locked versions + unlocked versions) when email was necessary.</li>
-      </ul>
-    </details>
-    
-    <!-- Financial Forecasts & Client Advisory -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">📈 Financial Forecasts & Client Advisory</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Prepared financial forecasts for clients, analyzing variances to guide decision-making.</li>
-      </ul>
-    </details>
-    
-    <!-- Partner Packages & Basis Calculations -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">👥 Partner Packages & Basis Calculations</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Prepared partner packages and partner basis calculations for partnership clients.</li>
-      </ul>
-    </details>
-    
-  </details>
-  
-  <!-- Internal Team & Operations (nested drop-down with sub-drop-downs) -->
-  <details style="margin-left: 1rem; margin-top: 0.5rem;">
-    <summary style="font-weight: 500; color: #3a5e3a;">🔧 Internal Team & Operations</summary>
-    
-    <!-- Cross-functional coordination -->
+    <!-- Professional Development -->
     <details style="margin-left: 1rem; margin-top: 0.5rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">🌍 Cross-functional coordination</summary>
+      <summary style="font-weight: 500; color: #3a5e3a;">🎓 Professional Development</summary>
       <ul style="margin-left: 1.5rem;">
-        <li>Managed workflows with offshore Acceleration Center teams (India, international), delegating binder/file prep before EOD and reviewing completed work each morning — enabling 24-hour productivity cycles.</li>
-      </ul>
-    </details>
-    
-    <!-- Specialty tax consulting -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">📞 Specialty tax consulting</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Collaborated with internal specialty teams (International Tax, SALT, R&D Credits, Section 163(j), Partner Basis) to secure technical calculations.</li>
-        <li>Coordinated separate engagement contracts and built flex forecasts to budget their hours against deadlines.</li>
-      </ul>
-    </details>
-    
-    <!-- Audit team support -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">📋 Audit team support</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Prepared and reviewed tax provision calculations for private audit clients, following strict audit documentation guidelines before returning workpapers to audit teams.</li>
-      </ul>
-    </details>
-    
-    <!-- E-filing & troubleshooting -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">📎 E-filing & troubleshooting</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Managed federal and state e-filing for client returns, resolved e-file errors by reviewing XML files, and prepared paper filings for states with system issues — all after securing client and partner signatures.</li>
-      </ul>
-    </details>
-    
-    <!-- International compliance -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">🌐 International compliance</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Prepared FBAR filings for clients with foreign accounts, ensuring compliance with Treasury reporting requirements.</li>
-      </ul>
-    </details>
-    
-    <!-- Team training -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">👥 Team training</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Trained 7 associates/interns on tax software and processes during busy season.</li>
-      </ul>
-    </details>
-    
-    <!-- Internal budgeting -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">📊 Internal budgeting</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Created annual budgets and flexible forecasts for internal team engagements, tracking actuals vs. plan to optimize resource allocation.</li>
-      </ul>
-    </details>
-    
-    <!-- Weekly team meeting lead -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">📅 Weekly team meeting lead (rotating)</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Hosted weekly Monday morning team meetings on a rotating schedule with associates and senior associates.</li>
-        <li>Updated team slideshow (intro, upcoming events/reminders, team calendar with OOO tracking).</li>
-        <li>Pre-reviewed slides with a partner before each meeting.</li>
-        <li>Reminded team to update client summary spreadsheets, flex forecasts, and calendar availability for the next 2-3 weeks.</li>
-      </ul>
-    </details>
-    
-    <!-- Workflow & deadline management -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">⏰ Workflow & deadline management</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Maintained a client summary spreadsheet with pivot table grouping active clients by upcoming deadlines (e.g., 3/15 filings).</li>
-        <li>Led meeting walkthroughs where each assigned staff provided status updates, identified blockers, and flagged completion.</li>
-        <li>Once completed and filed, clients were removed from active pivot view.</li>
-      </ul>
-    </details>
-    
-    <!-- Capacity planning & resource allocation -->
-    <details style="margin-left: 1rem; margin-top: 0.25rem;">
-      <summary style="font-weight: 500; color: #5e7a4b;">⚖️ Capacity planning & resource allocation</summary>
-      <ul style="margin-left: 1.5rem;">
-        <li>Used flex forecasts to track budgeted hours for senior associates, associates, interns, and fellows across client engagements.</li>
-        <li>Reviewed each person's client hours and total workload during meetings, enabling managers to identify availability, shift priorities, and balance team capacity.</li>
+        <li>CPA license obtained while at PwC (exams completed during Master of Accounting).</li>
       </ul>
     </details>
   </details>
-  
-  <!-- Professional Development (nested drop-down) -->
-  <details style="margin-left: 1rem; margin-top: 0.5rem;">
-    <summary style="font-weight: 500; color: #3a5e3a;">🎓 Professional Development</summary>
-    <ul style="margin-left: 1.5rem;">
-      <li>CPA license obtained while at PwC (exams completed during Master of Accounting).</li>
-    </ul>
-  </details>
-</details>
   
   <!-- STANCIL Tax Intern -->
   <details>
@@ -319,7 +358,6 @@
 
   <h2>Licenses & Certifications</h2>
   
-  <!-- CPA License -->
   <details>
     <summary>
       <span class="item-title">Certified Public Accountant (CPA)</span>
@@ -335,7 +373,6 @@
 
   <h2>Education</h2>
   
-  <!-- Master's Degree -->
   <details>
     <summary>
       <span class="item-title">Master of Accounting — Tax Strategy focus</span>
@@ -349,7 +386,6 @@
     </ul>
   </details>
 
-  <!-- Bachelor's Degree -->
   <details>
     <summary>
       <span class="item-title">Bachelor of Science in Accounting — Data Analytics focus</span>
@@ -358,7 +394,7 @@
       <span class="item-subtitle">North Carolina State University</span>
     </summary>
     <ul>
-      <li>Cum Laude</li>
+      <li>Summa Cum Laude (if applicable — add or remove)</li>
     </ul>
   </details>
 
