@@ -17,7 +17,7 @@
 
     body {
       font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #faf9f6;
+      background: #faf8f2;
       color: #2c3e2f;
       line-height: 1.5;
       min-height: 100vh;
@@ -25,9 +25,27 @@
       align-items: center;
       justify-content: center;
       padding: 1.5rem;
+      position: relative;
+    }
+
+    /* Subtle background pattern (museum wallpaper) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(#d4e0c4 1px, transparent 1px);
+      background-size: 32px 32px;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: 0;
     }
 
     .door {
+      position: relative;
+      z-index: 1;
       max-width: 900px;
       width: 100%;
       background: white;
@@ -35,7 +53,11 @@
       box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
       padding: 2.5rem 2rem;
       text-align: center;
-      border: 1px solid #e9e5da;
+      transition: transform 0.2s ease;
+    }
+
+    .door:hover {
+      transform: translateY(-3px);
     }
 
     h1 {
@@ -48,9 +70,9 @@
 
     .tagline {
       font-size: 1.2rem;
-      color: #6b7c5e;
-      margin-bottom: 2rem;
-      border-bottom: 2px solid #e2d9cd;
+      color: #8a9a7a;
+      margin-bottom: 1.8rem;
+      border-bottom: 2px solid #e8e0d0;
       display: inline-block;
       padding-bottom: 0.3rem;
     }
@@ -58,15 +80,19 @@
     .intro {
       font-size: 1.1rem;
       max-width: 600px;
-      margin: 0 auto 1rem auto;
-      color: #3e4a3a;
+      margin: 0 auto 0.75rem auto;
+      color: #4a5e45;
     }
 
     .museum-line {
-      font-size: 0.95rem;
-      color: #8a9a7a;
+      font-size: 0.9rem;
+      color: #b9c4ae;
       font-style: italic;
       margin-bottom: 2rem;
+      background: #fefbf5;
+      display: inline-block;
+      padding: 0.4rem 1.2rem;
+      border-radius: 60px;
     }
 
     .button-group {
@@ -80,28 +106,31 @@
     .door-button {
       display: inline-block;
       padding: 0.9rem 2.2rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 500;
       text-decoration: none;
       border-radius: 60px;
       transition: all 0.2s ease;
       background: white;
-      border: 1.5px solid #cbdbb8;
+      border: 1.5px solid #d4e0c4;
       color: #2c5e2a;
       min-width: 200px;
     }
 
     .door-button:hover {
-      background: #eef4e8;
+      background: #f0f4ea;
       transform: translateY(-3px);
       border-color: #9bba8e;
+      box-shadow: 0 8px 16px -8px rgba(0,0,0,0.1);
     }
 
     hr {
-      margin: 2rem 0;
+      margin: 2rem auto;
+      width: 60px;
+      height: 2px;
+      background: #e2d9cd;
       border: none;
-      height: 1px;
-      background: #e9e5da;
+      border-radius: 2px;
     }
 
     .footer-links {
@@ -115,11 +144,33 @@
     .footer-links a {
       color: #8a9a7a;
       text-decoration: none;
+      transition: color 0.2s;
     }
 
     .footer-links a:hover {
       color: #2c5e2a;
       text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 1.2rem;
+      font-size: 0.7rem;
+      color: #cbd5c1;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      .door {
+        padding: 2rem 1.5rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .door-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+        min-width: 160px;
+      }
     }
   </style>
 </head>
@@ -146,7 +197,7 @@
     <a href="https://raw.githubusercontent.com/roslyu/roslyu.github.io/main/Rosali_Su_CPA_Resume_2.pdf" target="_blank">Resume (PDF)</a>
     <a href="mailto:rosalisu17@gmail.com">Contact</a>
   </div>
-  <div style="margin-top: 1rem; font-size: 0.75rem; color: #b9c4ae;">
+  <div class="footer-note">
     ✻
   </div>
 </div>
