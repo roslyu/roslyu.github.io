@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosali Su · Opinions & Essays</title>
+  
+  <!-- Google Fonts: Lexend -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #fefaf0;
+      color: #2e3a2a;
+      line-height: 1.5;
+      padding: 2rem 1.5rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+      border: 1px solid #efe6d8;
+    }
+    h1 { font-size: 2rem; font-weight: 450; color: #4a6741; margin-bottom: 0.2rem; }
+    .sub { color: #8faa7b; margin-bottom: 2rem; font-style: italic; }
+    .back { display: inline-block; margin-top: 2rem; color: #8a9a7a; text-decoration: none; }
+    .essay-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .essay-card {
+      background: #fefbf5;
+      border: 1px solid #f0e7da;
+      border-radius: 20px;
+      padding: 1.2rem;
+      transition: all 0.2s ease;
+    }
+    .essay-card:hover {
+      background: #fffaf0;
+      border-color: #d4e0c4;
+    }
+    .essay-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #4a6741;
+      margin-bottom: 0.5rem;
+    }
+    .essay-excerpt {
+      font-size: 0.9rem;
+      color: #6b7c5e;
+      margin-bottom: 0.75rem;
+    }
+    .read-more {
+      font-size: 0.85rem;
+      color: #5e7a4b;
+      text-decoration: none;
+      border-bottom: 1px solid #d4e0c4;
+    }
+    .read-more:hover {
+      color: #2c5e2a;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>💭 opinions & essays</h1>
+  <div class="sub">observations on work, cognition, culture, and curiosity</div>
+
+  <div class="essay-list">
+    
+    <!-- Essay 1: Brain Smoothing -->
+    <div class="essay-card">
+      <div class="essay-title">brain smoothing & the cost of narrow work</div>
+      <div class="essay-excerpt">On how repetitive work flattens time and creativity — and how I started rebuilding texture.</div>
+      <a href="#" class="read-more" onclick="toggleEssay(event, 'brain-smoothing')">read more →</a>
+      <div id="brain-smoothing" style="display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #efe6d8;">
+        <p style="font-size: 0.9rem; color: #4a5e45;">There's a phenomenon I call "brain smoothing" — when days blend together, novelty fades, and different versions of yourself become harder to access. It happens when work becomes too narrow, too repetitive, too flattened.<br><br>
+        I observed this firsthand in public accounting: the same screens, the same rhythms, the slow erosion of creative curiosity. Reading for hours, wandering, noticing things just because — all of it became harder.<br><br>
+        The year after PwC was an experiment in rebuilding texture. The website. The macarons. The dogs. The woodworking. The solo travel. Not as a résumé. As evidence: curiosity can be reclaimed. Seasons of yourself can return. You just have to make space for them.</p>
+      </div>
+    </div>
+
+    <!-- Essay 2: Big Firm, Big Trade‑off -->
+    <div class="essay-card">
+      <div class="essay-title">big firm, big trade‑off</div>
+      <div class="essay-excerpt">Why I chose a large firm, what it gave me, and why I knew when to step away.</div>
+      <a href="#" class="read-more" onclick="toggleEssay(event, 'big-firm-tradeoff')">read more →</a>
+      <div id="big-firm-tradeoff" style="display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #efe6d8;">
+        <p style="font-size: 0.9rem; color: #4a5e45;">I chose PwC because it was a big firm. That meant pools of peers joining at the same time, global connections, the ability to transfer offices, and a launchpad for opportunities I wouldn't have known how to find on my own.<br><br>
+        There's a real upside to that kind of environment, especially in your twenties. Being inside a large organization with good benefits and a global reach can feel like the fastest way to get somewhere. And honestly, I loved my team. The people made it worthwhile.<br><br>
+        But there's a trade‑off. The same structure that opens doors also narrows your days. High expectations, long hours, and the slow erosion of personal projects and unstructured freedom. I don't regret it — I needed the launchpad. But I also needed to know when to step away.<br><br>
+        When you're always being told what to do — when someone else maps out the path detail by detail — you don't have space to think critically or look beyond the microscope. It's hard to see that there are options. Hard to be creatively minded. That was the hardest part: trusting myself to make a decision. Not because anything was broken, but because I had gotten what I needed and it was time to build my own map.<br><br>
+        Building your own map is the best learning experience. You have the freedom to explore, to pivot, to create — without too many commitments crowding your life and taking away the space you need to think.</p>
+      </div>
+    </div>
+
+    <!-- Essay 3: LGBTQ+ Research -->
+    <div class="essay-card">
+      <div class="essay-title">LGBTQ+ inclusion in state accountancy boards</div>
+      <div class="essay-excerpt">Research from my master's program on how state laws address (or don't address) LGBTQ+ inclusion in professional licensing.</div>
+      <a href="#" class="read-more" onclick="toggleEssay(event, 'lgbtq-research')">read more →</a>
+      <div id="lgbtq-research" style="display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #efe6d8;">
+        <p style="font-size: 0.9rem; color: #4a5e45;">During my graduate research assistantship, I studied state accountancy board laws to analyze whether LGBTQ+ individuals were explicitly included in public accommodations and accessibility language. The findings varied significantly by state — some explicitly inclusive, some silent, some ambiguous.<br><br>
+        The research reinforced my interest in how professional regulation intersects with civil rights, and how vague language can create real barriers. Full post coming with a state‑by‑state summary and reflections on statutory interpretation.</p>
+        <span class="more-soon" style="font-size: 0.8rem; color: #b9c4ae; font-style: italic;">✻ more soon — including a state‑by‑state summary and reflections on statutory interpretation</span>
+      </div>
+    </div>
+
+    <!-- Essay 4: Culture & Travel -->
+    <div class="essay-card">
+      <div class="essay-title">culture & travel — observing how place shapes perception</div>
+      <div class="essay-excerpt">Notes on cultural relativity, the geography of reality, and what I learn from being somewhere new.</div>
+      <a href="#" class="read-more" onclick="toggleEssay(event, 'culture-travel')">read more →</a>
+      <div id="culture-travel" style="display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #efe6d8;">
+        <p style="font-size: 0.9rem; color: #4a5e45;">I love traveling not just to see new places, but to notice how people in different environments perceive reality differently. Growing up somewhere shapes what you assume is normal, what you value, how you move through the world.<br><br>
+        Cultural relativity isn't just an academic concept — it's something you feel when you're sitting in a café in a country where the pace of life is slower, or walking through a market where haggling is expected, or driving on the opposite side of the road and realizing how much of what you know is just habit.<br><br>
+        These observations don't have neat conclusions. That's the point. I'm collecting them — not to prove anything, but to remind myself that my way of seeing is not the only way. More reflections from the road.</p>
+        <span class="more-soon" style="font-size: 0.8rem; color: #b9c4ae; font-style: italic;">✻ more soon — notes from Ireland, future travels, and the art of noticing difference</span>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="personal.html" class="back">← back to personal & projects</a>
+</div>
+
+<script>
+  function toggleEssay(event, id) {
+    event.preventDefault();
+    var element = document.getElementById(id);
+    if (element.style.display === "none" || element.style.display === "") {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  }
+</script>
+</body>
+</html>
