@@ -35,13 +35,58 @@
     .date { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #b9c4ae; margin-bottom: 0.3rem; }
     .back { display: inline-block; margin-top: 2rem; color: #8a9a7a; text-decoration: none; }
     .more-soon { font-size: 0.8rem; color: #b9c4ae; margin-top: 0.5rem; font-style: italic; }
+    
+    /* New door styles */
+    .doors-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .door-card {
+      background: #fefbf5;
+      border: 1px solid #f0e7da;
+      border-radius: 20px;
+      padding: 1rem 1.2rem;
+      transition: all 0.2s ease;
+    }
+    .door-card:hover {
+      background: #fffaf0;
+      border-color: #d4e0c4;
+      transform: translateX(4px);
+    }
+    .door-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #4a6741;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .door-desc {
+      font-size: 0.85rem;
+      color: #8a9a7a;
+    }
+    .door-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #5e7a4b;
+      text-decoration: none;
+      border-bottom: 1px solid #d4e0c4;
+    }
+    .door-link:hover {
+      color: #2c5e2a;
+    }
   </style>
 </head>
 <body>
 <div class="container">
   <h1>🌱 wild & well</h1>
-  <div class="sub">macarons · dog stories · journal & thoughts</div>
+  <div class="sub">macarons · dog stories · journal · opinions</div>
 
+  <!-- ========== EXISTING PROJECTS ========== -->
   <h2>🍥 macarons — small batch, big feeling</h2>
   <div class="card">
     <p>Starting a home‑based macaron business, with personally curated flavors and designs. Flavors: orange marmalade and dark chocolate ganache, matcha strawberry, blueberry ganache, crème brûlée<br>
@@ -60,11 +105,33 @@
     <span class="more-soon">✻ more soon — including my altered wardrobe and hand‑bound sketchbooks</span></p>
   </div>
 
-  <h2>📔 journal — opinions, research, introspection</h2>
+  <!-- ========== NEW: DOORS (MOVIES, OPINIONS, ETC.) ========== -->
+  <h2>🚪 doors — thoughts & opinions</h2>
+  <div class="doors-grid">
+    <div class="door-card">
+      <div class="door-title">🎬 movie reviews</div>
+      <div class="door-desc">What I'm watching, what I loved, what I didn't — and why.</div>
+      <a href="#" class="door-link">coming soon →</a>
+    </div>
+    <div class="door-card">
+      <div class="door-title">💭 opinions & essays</div>
+      <div class="door-desc">On creativity, work, dogs, and the occasional cultural observation.</div>
+      <a href="#" class="door-link">coming soon →</a>
+    </div>
+    <div class="door-card">
+      <div class="door-title">📖 recommendations</div>
+      <div class="door-desc">Books, podcasts, shows, and things that made me think.</div>
+      <a href="#" class="door-link">coming soon →</a>
+    </div>
+  </div>
+  <p style="font-size: 0.8rem; color: #b9c4ae; margin-top: -0.5rem; margin-bottom: 1rem;">✻ more doors to come — this is just the beginning</p>
+
+  <!-- ========== JOURNAL (KEPT AS IS) ========== -->
+  <h2>📔 journal — introspection & memories</h2>
   <div class="journal-entry">
     <div class="date">may 2026</div>
-    <p><strong>on stepping away from pwc and toward curiosity</strong><br>
-    A year of rest, baking, and remembering why I loved accounting (it's the patterns, not the deadlines). More soon.</p>
+    <p><strong>on stepping away from work and toward curiosity</strong><br>
+    A year of rest, baking, and remembering why I chose accounting (it's the patterns, not the deadlines). More soon.</p>
   </div>
   <div class="journal-entry">
     <div class="date">april 2026</div>
@@ -80,7 +147,7 @@
   <div class="journal-entry">
     <div class="date">may 2026</div>
     <p><strong>brain smoothing, memory, and finding my creative spark again</strong><br>
-    During my time at PwC, I talked with my therapist about something I started calling "brain smoothing" — the feeling of days blending together, of not learning anything new, of losing the different seasons of myself. I missed my creative spark. I missed reading for hours. I missed being in different spaces, being curious by default, being the person who noticed things.<br><br>
+    During my time working, post-grad, I talked with my peers about something I started calling "brain smoothing" — the feeling of days blending together, of not learning anything new, of losing the different seasons of myself. I missed my creative spark. I missed reading for hours. I missed being in different spaces, being curious by default, being the person who noticed things.<br><br>
     I was scared. Scared of losing my memory of who I was. Scared that the narrowness of work was flattening me into one version of myself — and that version didn't feel like me.<br><br>
     This gap year has been about reclaiming that. The website. The macarons. The dog content. The woodworking. The solo trip. Not as a resume. As proof: I'm still here. I still learn. I still dream. And the seasons of me come back, one by one.<br>
     <span class="more-soon">✻ more soon — on memory, dreams, and how I'm rebuilding the architecture of my mind</span></p>
