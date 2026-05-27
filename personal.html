@@ -31,8 +31,6 @@
     h2 { font-size: 1.3rem; font-weight: 500; color: #5e7a4b; margin: 2rem 0 1rem 0; border-left: 4px solid #d4e0c4; padding-left: 1rem; }
     .card { margin-bottom: 1.8rem; background: #fefbf5; padding: 1.2rem; border-radius: 20px; border: 1px solid #f0e7da; }
     .card a { color: #4a6741; font-weight: 500; text-decoration: none; border-bottom: 1px solid #d4e0c4; }
-    .journal-entry { margin-bottom: 2rem; border-bottom: 1px solid #efe6d8; padding-bottom: 1rem; }
-    .date { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #b9c4ae; margin-bottom: 0.3rem; }
     .back { display: inline-block; margin-top: 2rem; color: #8a9a7a; text-decoration: none; }
     .more-soon { font-size: 0.8rem; color: #b9c4ae; margin-top: 0.5rem; font-style: italic; }
     
@@ -84,6 +82,60 @@
       padding-top: 0.5rem;
       border-top: 1px dashed #f0e7da;
     }
+
+    /* Journal drop‑down styles */
+    .journal-dropdown {
+      margin-bottom: 1rem;
+      border: 1px solid #f0e7da;
+      border-radius: 20px;
+      background: #fefbf5;
+      padding: 0.5rem 1rem;
+      transition: all 0.2s ease;
+    }
+    .journal-dropdown:hover {
+      background: #fffaf0;
+      border-color: #d4e0c4;
+    }
+    .journal-dropdown summary {
+      cursor: pointer;
+      font-weight: 500;
+      color: #4a6741;
+      padding: 0.5rem 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .journal-dropdown summary::-webkit-details-marker {
+      display: none;
+    }
+    .journal-dropdown summary::before {
+      content: "▶";
+      font-size: 0.7rem;
+      color: #b9c4ae;
+      margin-right: 0.75rem;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .journal-dropdown[open] summary::before {
+      content: "▼";
+    }
+    .journal-title {
+      font-weight: 600;
+      color: #4a6741;
+    }
+    .journal-date {
+      font-weight: normal;
+      color: #b9c4ae;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .journal-content {
+      margin-top: 1rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid #f0e7da;
+    }
   </style>
 </head>
 <body>
@@ -110,28 +162,35 @@
     <span class="more-soon">✻ more soon — including my altered wardrobe and hand‑bound sketchbooks</span></p>
   </div>
 
-
-  <!-- ========== JOURNAL (pure memories) ========== -->
+  <!-- ========== JOURNAL (drop‑down entries) ========== -->
   <h2>📔 journal — memories & milestones</h2>
   
-  <div class="journal-entry">
-    <div class="date">september 2025</div>
-    <p><strong>solo trip to ireland — driving the wild atlantic way</strong><br>
-    I rented a car and drove around the entire country of Ireland alone. I visited local ruins, drank tea in tiny coastal cafes, and learned the history of places I'd only ever seen in photos. There's something about navigating narrow roads with the steering wheel on the other side that forces you to be present. Revelations on solitude, adventure, and trusting myself — more soon.</p>
-    <span class="more-soon">✻ more soon — including my favorite hidden spots and what I learned about traveling alone</span>
-  </div>
+  <details class="journal-dropdown">
+    <summary>
+      <span class="journal-title">solo trip to ireland — driving the wild atlantic way</span>
+      <span class="journal-date">september 2025</span>
+    </summary>
+    <div class="journal-content">
+      <p>I rented a car and drove around the entire country of Ireland alone. I visited local ruins, drank tea in tiny coastal cafes, and learned the history of places I'd only ever seen in photos. There's something about navigating narrow roads with the steering wheel on the other side that forces you to be present. Revelations on solitude, adventure, and trusting myself — more soon.</p>
+      <span class="more-soon">✻ more soon — including my favorite hidden spots and what I learned about traveling alone</span>
+    </div>
+  </details>
 
-   <div class="journal-entry">
-    <div class="date">may 2026</div>
-    <p><strong>on stepping away from work and toward curiosity</strong><br>
-    I have many interests. I love learning. I cannot simply choose one. There are multiple roles I want to play — producer, thinker, creator, admirer, wanderer. For a long time, I felt weird about that. Like I was supposed to pick one.<br><br>
-    But I also felt weird about giving up all the knowledge I gained over years of studying and working in accounting — the laws, the people, the professional skills. I leaned heavily on what business school and public accounting gave me: the ability to communicate, to analyze, to manage, to lead.<br><br>
-    I chose accounting because there are options. Many options. The core work stays the same, so I can build on what I've already worked so hard for. But I can learn new things by being in different companies, different industries, different environments, different missions.<br><br>
-    A local nonprofit creative reuse center taught me that. And my conversation with an executive director - who had a background in consulting with a big firm and had worked at National Geographic, the Museum of Life and Science, and other places - showed me that you don't have to start over. You just have to use your background creatively. <strong>Not abandoning your knowledge — redeploying it.</strong><br><br>
-     That conversation stayed with me. It made me realize that my path doesn't have to be linear. I can take what I've built and point it toward what people actually need.<br><br>
-      It's not about whether I'm "qualified" in a narrow sense. It's about whether someone out there could use my help — and whether I have the skill to provide it. I do. I just had to stop waiting for permission and start offering.<br>
-    <span class="more-soon">✻ more soon — on the freedom of a portable skillset and the joy of many doors</span></p>
-  </div>
+  <details class="journal-dropdown">
+    <summary>
+      <span class="journal-title">on stepping away from work and toward curiosity</span>
+      <span class="journal-date">may 2026</span>
+    </summary>
+    <div class="journal-content">
+      <p>I have many interests. I love learning. I cannot simply choose one. There are multiple roles I want to play — producer, thinker, creator, admirer, wanderer. For a long time, I felt weird about that. Like I was supposed to pick one.<br><br>
+      But I also felt weird about giving up all the knowledge I gained over years of studying and working in accounting — the laws, the people, the professional skills. I leaned heavily on what business school and public accounting gave me: the ability to communicate, to analyze, to manage, to lead.<br><br>
+      I chose accounting because there are options. Many options. The core work stays the same, so I can build on what I've already worked so hard for. But I can learn new things by being in different companies, different industries, different environments, different missions.<br><br>
+      A local nonprofit creative reuse center taught me that. And my conversation with an executive director - who had a background in consulting with a big firm and had worked at National Geographic, the Museum of Life and Science, and other places - showed me that you don't have to start over. You just have to use your background creatively. <strong>Not abandoning your knowledge — redeploying it.</strong><br><br>
+      That conversation stayed with me. It made me realize that my path doesn't have to be linear. I can take what I've built and point it toward what people actually need.<br><br>
+      It's not about whether I'm "qualified" in a narrow sense. It's about whether someone out there could use my help — and whether I have the skill to provide it. I do. I just had to stop waiting for permission and start offering.</p>
+      <span class="more-soon">✻ more soon — on the freedom of a portable skillset and the joy of many doors</span>
+    </div>
+  </details>
 
   <p><em>✻ new posts added when inspiration hits</em></p>
 
